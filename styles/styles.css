@@ -41,10 +41,75 @@ body{
     
 }
 .navigation_header_right .nav .padd{
-    padding-right: 3em;
+   margin-right: 3em;
+   
     
+}
+.navigation_header_right .nav #active{
+    border-top: 1px solid rgb(255, 196, 0);
+    color: rgb(255, 196, 0);
 }
 .navigation_header_right .nav .search_icon{
     padding-right:0;
 }
-.n
+.navigation_header_right .nav:hover .padd{
+    border-top: 1px solid rgb(255, 196, 0);
+    color: rgb(255, 196, 0);
+}
+.navigation_header_right .nav:hover .search_icon{
+    opacity: .5;
+}
+.centered{
+    padding:0 0;
+    width:80%;
+    max-width: 1024px;
+   overflow: hidden;
+   margin: 0 auto;
+
+    
+}
+.centered .masonry{
+    
+    column-gap: 30px;
+    margin:1.5em auto;
+    
+}
+.centered .masonry .item{
+    display: inline-block; /* Fix the misalignment of items */
+    vertical-align: top; /* Keep the item on the very top */
+    max-width: 200px;
+    border: gray;
+    border-style: solid;
+    border-width: thin;
+    margin:.5em 0;
+
+}
+.centered .masonry .item img{
+    width: 100%;
+    
+
+    
+}
+@media only screen and (max-width: 767px){
+    .masonry{
+        column-count: 1;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+        .masonry {
+            column-count: 2;
+          }
+        }
+
+@media only screen and (min-width: 1024px){
+    .masonry{
+        column-count: 4;
+    }
+}
+.masonry .item:hover img {
+    opacity: .75;
+  }
+  .masonry .item img {
+    transition: all .5s ease-in-out;
+    backface-visibility: hidden; /* Remove Image flickering on hover */
+  }
