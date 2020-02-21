@@ -94,16 +94,21 @@ body{
 
     
 }
-@media only screen and (max-width: 767px){
+@media only screen and(max-width: 499px){
     .masonry{
         column-count: 1;
     }
-    .social_media_header{
+}
+@media only screen and (min-width:500px) and (max-width: 767px){
+    .masonry{
+        column-count: 2;
+    }
+    /*.social_media_header{
         padding: 0;
         margin: 0 auto;
         text-align: center;
         
-    }
+    }*/
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
